@@ -51,6 +51,22 @@ class _GameListScreenState extends State<GameListScreen> {
             const SizedBox(
               height: 20,
             ),
+            // ElevatedButton(
+            //   // style: ElevatedButton.styleFrom(
+            //   //   elevation: 10,
+            //   //   shape: BeveledRectangleBorder(
+            //   //       borderRadius: BorderRadius.circular(120)),
+            //   // ),
+            //   onPressed: () {
+            //     Navigator.pushNamed(context, '/pknGame');
+            //   },
+            //   child: Text(
+            //     AppLocalizations.of(context)!.pknGame,
+            //   ),
+            // ),
+            // const SizedBox(
+            //   height: 20,
+            // ),
             ElevatedButton(
               // style: ElevatedButton.styleFrom(
               //   elevation: 10,
@@ -74,7 +90,15 @@ class _GameListScreenState extends State<GameListScreen> {
               child: Text(
                 AppLocalizations.of(context)!.fruitGame,
               ),
-            )
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/pknGame');
+              },
+              child: Text(
+                AppLocalizations.of(context)!.pknGame,
+              ),
+            ),
           ],
         ),
       ),

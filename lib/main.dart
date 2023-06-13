@@ -4,6 +4,7 @@ import 'package:flutter_kids_matching_game/screens/animal_game_screen.dart';
 import 'package:flutter_kids_matching_game/screens/color_game_screen.dart';
 import 'package:flutter_kids_matching_game/screens/fruit_game_screen.dart';
 import 'package:flutter_kids_matching_game/screens/game-list_screen.dart';
+import 'package:flutter_kids_matching_game/screens/pkn_game_screen.dart';
 import 'package:flutter_kids_matching_game/screens/setting_page_screen.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:get_storage/get_storage.dart';
@@ -74,6 +75,7 @@ class _MyAppState extends State<MyApp> {
             '/colorGame': (context) => const ColorGameScreen(),
             '/animalGame': (context) => const AnimalGameScreen(),
             '/fruitGame': (context) => const FruitGameScreen(),
+            '/pknGame': (context) => const PknGameScreen(),
             '/setting': (context) => const SettingPageScreen(),
           },
           supportedLocales: L10n.all,

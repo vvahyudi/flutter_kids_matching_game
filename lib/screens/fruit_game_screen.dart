@@ -1,3 +1,5 @@
+// ignore_for_file: non_constant_identifier_names
+
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -49,7 +51,7 @@ class _FruitGameScreenState extends State<FruitGameScreen> {
       GameItem(
           image: "assets/images/fruits/apple.png",
           name: localization!.apple,
-          value: localization!.apple,
+          value: localization.apple,
           level: 'Level 1'),
       GameItem(
           image: "assets/images/fruits/banana.png",

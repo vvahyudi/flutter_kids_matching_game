@@ -118,12 +118,19 @@ class _SettingPageScreenState extends State<SettingPageScreen> {
                         if (selectedLanguage == 'አማርኛ') {
                           provider.setLocale(const Locale('am'));
                           box.write('selectedLocale', 'am');
-                        } else if (selectedLanguage == 'العربية') {
-                          provider.setLocale(const Locale('ar'));
-                          box.write('selectedLocale', 'ar');
                         } else {
-                          provider.setLocale(const Locale('en'));
-                          box.write('selectedLocale', 'en');
+                          if (selectedLanguage == 'العربية') {
+                            provider.setLocale(const Locale('ar'));
+                            box.write('selectedLocale', 'ar');
+                          } else {
+                            if (selectedLanguage == 'Indonesian') {
+                              provider.setLocale(const Locale('id'));
+                              box.write('selectedLocale', 'id');
+                            } else {
+                              provider.setLocale(const Locale('en'));
+                              box.write('selectedLocale', 'en');
+                            }
+                          }
                         }
                         selectedLevel = box.read('selectedLevel');
                         selectedThemeColor = box.read('selectedThemeColor');

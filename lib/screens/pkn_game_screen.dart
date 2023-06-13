@@ -1,5 +1,3 @@
-// ignore_for_file: unused_import, non_constant_identifier_names
-
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_kids_matching_game/utilities/utilities.dart';
@@ -10,14 +8,14 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../provider/settings_provider.dart';
 
-class ColorGameScreen extends StatefulWidget {
-  const ColorGameScreen({Key? key}) : super(key: key);
+class PknGameScreen extends StatefulWidget {
+  const PknGameScreen({Key? key}) : super(key: key);
 
   @override
-  State<ColorGameScreen> createState() => _ColorGameScreenState();
+  State<PknGameScreen> createState() => _PknGameScreenState();
 }
 
-class _ColorGameScreenState extends State<ColorGameScreen> {
+class _PknGameScreenState extends State<PknGameScreen> {
   //to keep track of the player's score and game status
 
   // here new score
@@ -37,171 +35,200 @@ class _ColorGameScreenState extends State<ColorGameScreen> {
   @override
   void didChangeDependencies() {
     initGame();
-    // TODO: implement didChangeDependencies
     super.didChangeDependencies();
   }
 
-//to initialize or restart the game
-
   void initGame() {
-    final localization = AppLocalizations.of(context);
+    final localization = AppLocalizations.of(context)!;
     score = 0;
     gameOver = false;
 
     choice_All = [
+      //1.1
       GameItem(
-          image: "assets/images/colors/White.png",
-          name: localization!.white,
-          value: localization.white,
+          image: "assets/images/pkn/Pancasila.png",
+          name: localization!.pancasila,
+          value: localization.pancasila,
           level: "Level 1"),
+      //1.2
       GameItem(
-          image: "assets/images/colors/Black.png",
-          name: localization.black,
-          value: localization.black,
+          image: "assets/images/pkn/Pancasila.png",
+          name: localization!.pancasila,
+          value: localization.pancasila,
           level: "Level 1"),
+      //1.3
       GameItem(
-          image: "assets/images/colors/Blue.png",
-          name: localization.blue,
-          value: localization.blue,
+          image: "assets/images/pkn/Pancasila.png",
+          name: localization!.pancasila,
+          value: localization.pancasila,
           level: "Level 1"),
+      //1.4
       GameItem(
-          image: "assets/images/colors/Red.png",
-          name: localization.red,
-          value: localization.red,
+          image: "assets/images/pkn/Pancasila.png",
+          name: localization!.pancasila,
+          value: localization.pancasila,
           level: "Level 1"),
+      //1.5
       GameItem(
-          image: "assets/images/colors/Green.png",
-          name: localization.green,
-          value: localization.green,
+          image: "assets/images/pkn/Pancasila.png",
+          name: localization!.pancasila,
+          value: localization.pancasila,
           level: "Level 1"),
+      // 1.6
       GameItem(
-          image: "assets/images/colors/Yellow.png",
-          name: localization.yellow,
-          value: localization.yellow,
+          image: "assets/images/pkn/Pancasila.png",
+          name: localization!.pancasila,
+          value: localization.pancasila,
           level: "Level 1"),
+
+      // 2.1
       GameItem(
-          image: "assets/images/colors/Orange.png",
-          name: localization.orange,
-          value: localization.orange,
+          image: "assets/images/pkn/Pancasila.png",
+          name: localization!.pancasila,
+          value: localization.pancasila,
           level: "Level 2"),
+      // 2.2
       GameItem(
-          image: "assets/images/colors/Pink.png",
-          name: localization.pink,
-          value: localization.pink,
+          image: "assets/images/pkn/Pancasila.png",
+          name: localization!.pancasila,
+          value: localization.pancasila,
           level: "Level 2"),
+      // 2.3
       GameItem(
-          image: "assets/images/colors/Purple.png",
-          name: localization.purple,
-          value: localization.purple,
+          image: "assets/images/pkn/Pancasila.png",
+          name: localization!.pancasila,
+          value: localization.pancasila,
           level: "Level 2"),
+      // 2.4
       GameItem(
-          image: "assets/images/colors/Cyan.png",
-          name: localization.cyan,
-          value: localization.cyan,
+          image: "assets/images/pkn/Pancasila.png",
+          name: localization!.pancasila,
+          value: localization.pancasila,
           level: "Level 2"),
+      // 2.5
       GameItem(
-          image: "assets/images/colors/Mustard.png",
-          name: localization.mustard,
-          value: localization.mustard,
+          image: "assets/images/pkn/Pancasila.png",
+          name: localization!.pancasila,
+          value: localization.pancasila,
           level: "Level 2"),
+      // 2.6
       GameItem(
-          image: "assets/images/colors/Gray.png",
-          name: localization.gray,
-          value: localization.gray,
+          image: "assets/images/pkn/Pancasila.png",
+          name: localization!.pancasila,
+          value: localization.pancasila,
           level: "Level 2"),
+
+      // 3.1
       GameItem(
-          image: "assets/images/colors/Navy Blue.png",
-          name: localization.navyblue,
-          value: localization.navyblue,
+          image: "assets/images/pkn/Pancasila.png",
+          name: localization!.pancasila,
+          value: localization.pancasila,
           level: "Level 3"),
+      // 3.2
       GameItem(
-          image: "assets/images/colors/Golden.png",
-          name: localization.golden,
-          value: localization.golden,
+          image: "assets/images/pkn/Pancasila.png",
+          name: localization!.pancasila,
+          value: localization.pancasila,
           level: "Level 3"),
+      // 3.3
       GameItem(
-          image: "assets/images/colors/Burgundy.png",
-          name: localization.burgundy,
-          value: localization.burgundy,
+          image: "assets/images/pkn/Pancasila.png",
+          name: localization!.pancasila,
+          value: localization.pancasila,
           level: "Level 3"),
+      // 3.4
       GameItem(
-          image: "assets/images/colors/Lime.png",
-          name: localization.lime,
-          value: localization.lime,
+          image: "assets/images/pkn/Pancasila.png",
+          name: localization!.pancasila,
+          value: localization.pancasila,
           level: "Level 3"),
+      // 3.5
       GameItem(
-          image: "assets/images/colors/Cream.png",
-          name: localization.cream,
-          value: localization.cream,
+          image: "assets/images/pkn/Pancasila.png",
+          name: localization!.pancasila,
+          value: localization.pancasila,
           level: "Level 3"),
+      // 3.6
       GameItem(
-          image: "assets/images/colors/Aqua.png",
-          name: localization.aqua,
-          value: localization.aqua,
+          image: "assets/images/pkn/Pancasila.png",
+          name: localization!.pancasila,
+          value: localization.pancasila,
           level: "Level 3"),
+
+      // 4.1
       GameItem(
-          image: "assets/images/colors/Beige.png",
-          name: localization.beige,
-          value: localization.beige,
+          image: "assets/images/pkn/Pancasila.png",
+          name: localization!.pancasila,
+          value: localization.pancasila,
           level: "Level 4"),
+      // 4.2
       GameItem(
-          image: "assets/images/colors/Silver.png",
-          name: localization.silver,
-          value: localization.silver,
+          image: "assets/images/pkn/Pancasila.png",
+          name: localization!.pancasila,
+          value: localization.pancasila,
           level: "Level 4"),
+      //4.3
       GameItem(
-          image: "assets/images/colors/Olive.png",
-          name: localization.olive,
-          value: localization.olive,
+          image: "assets/images/pkn/Pancasila.png",
+          name: localization!.pancasila,
+          value: localization.pancasila,
           level: "Level 4"),
+      // 4.4
       GameItem(
-          image: "assets/images/colors/Coral.png",
-          name: localization.coral,
-          value: localization.coral,
+          image: "assets/images/pkn/Pancasila.png",
+          name: localization!.pancasila,
+          value: localization.pancasila,
           level: "Level 4"),
+      // 4.5
       GameItem(
-          image: "assets/images/colors/Mauve.png",
-          name: localization.mauve,
-          value: localization.mauve,
+          image: "assets/images/pkn/Pancasila.png",
+          name: localization!.pancasila,
+          value: localization.pancasila,
           level: "Level 4"),
+      // 4.6
       GameItem(
-          image: "assets/images/colors/Teal.png",
-          name: localization.teal,
-          value: localization.teal,
+          image: "assets/images/pkn/Pancasila.png",
+          name: localization!.pancasila,
+          value: localization.pancasila,
           level: "Level 4"),
+
+      // 5.1
       GameItem(
-          image: "assets/images/colors/Bronze.png",
-          name: localization.bronze,
-          value: localization.bronze,
+          image: "assets/images/pkn/Pancasila.png",
+          name: localization!.pancasila,
+          value: localization.pancasila,
           level: "Level 5"),
+      // 5.2
       GameItem(
-          image: "assets/images/colors/Maroon.png",
-          name: localization.maroon,
-          value: localization.maroon,
+          image: "assets/images/pkn/Pancasila.png",
+          name: localization!.pancasila,
+          value: localization.pancasila,
           level: "Level 5"),
+      // 5.3
       GameItem(
-          image: "assets/images/colors/Lavender.png",
-          name: localization.lavender,
-          value: localization.lavender,
+          image: "assets/images/pkn/Pancasila.png",
+          name: localization!.pancasila,
+          value: localization.pancasila,
           level: "Level 5"),
+      // 5.4
       GameItem(
-          image: "assets/images/colors/Rust.png",
-          name: localization.rust,
-          value: localization.rust,
-          level: localization.level5),
-      GameItem(
-          image: "assets/images/colors/Peach.png",
-          name: localization.peach,
-          value: localization.peach,
+          image: "assets/images/pkn/Pancasila.png",
+          name: localization!.pancasila,
+          value: localization.pancasila,
           level: "Level 5"),
+      // 5.5
       GameItem(
-          image: "assets/images/colors/Magenta.png",
-          name: localization.magenta,
-          value: localization.magenta,
+          image: "assets/images/pkn/Pancasila.png",
+          name: localization!.pancasila,
+          value: localization.pancasila,
+          level: "Level 5"),
+      // 5.6
+      GameItem(
+          image: "assets/images/pkn/Pancasila.png",
+          name: localization!.pancasila,
+          value: localization.pancasila,
           level: "Level 5"),
     ];
-
-    // ignore: avoid_print
     print(utilities.getGameLevel());
     choice_A = List<GameItem>.from(choice_All.where((element) =>
         element.level.contains(utilities.getGameLevel().toString())));
@@ -211,7 +238,6 @@ class _ColorGameScreenState extends State<ColorGameScreen> {
     choice_B.shuffle();
   }
 
-  // we use it to play sounds
   final _audioController = AudioPlayer();
 
   @override

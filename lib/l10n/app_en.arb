@@ -27,6 +27,10 @@
 "@fruitGame":{
               "description": "fruit game"
               },
+"pknGame":"Game PKN",
+"@fruitGame":{
+              "description": "pkn game"
+              },
  "lessonLanguage":"Lesson Language",
     "@lessonLanguage":{
      "description": "lesson language"
@@ -487,9 +491,12 @@
 "rhinoceros": "Rhinoceros",
     "@rhinoceros":{
                     "description": "rhinoceros animal"
+                                            },
+
+"pancasila": "Lambang Pancasila",
+    "@pancasila":{
+                    "description": "pancasila"
                                             }
-
-
 
 
 
