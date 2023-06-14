@@ -4,24 +4,10 @@ import 'package:intl/intl.dart';
 // the locales our app will support, and we will have translation files for those locales
 class L10n {
   static final all = [
-    const Locale('am'),
     const Locale('en'),
-    const Locale('ar'),
-    const Locale('id'),
   ];
 
   static String getLanguages(String code) {
-    switch (code) {
-      case 'am':
-        return "አማርኛ";
-      case 'en':
-        return "English";
-      case 'ar':
-        return "العربية";
-      case 'id':
-        return 'Indonesian';
-      default:
-        return "English";
-    }
+    return "English";
   }
 }

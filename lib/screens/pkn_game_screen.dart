@@ -81,153 +81,33 @@ class _PknGameScreenState extends State<PknGameScreen> {
           value: localization.pancasila,
           level: "Level 1"),
 
-      // 2.1
+      // 1.7
       GameItem(
           image: "assets/images/pkn/Pancasila.png",
           name: localization!.pancasila,
           value: localization.pancasila,
-          level: "Level 2"),
-      // 2.2
-      GameItem(
-          image: "assets/images/pkn/Pancasila.png",
-          name: localization!.pancasila,
-          value: localization.pancasila,
-          level: "Level 2"),
-      // 2.3
-      GameItem(
-          image: "assets/images/pkn/Pancasila.png",
-          name: localization!.pancasila,
-          value: localization.pancasila,
-          level: "Level 2"),
-      // 2.4
-      GameItem(
-          image: "assets/images/pkn/Pancasila.png",
-          name: localization!.pancasila,
-          value: localization.pancasila,
-          level: "Level 2"),
-      // 2.5
-      GameItem(
-          image: "assets/images/pkn/Pancasila.png",
-          name: localization!.pancasila,
-          value: localization.pancasila,
-          level: "Level 2"),
-      // 2.6
-      GameItem(
-          image: "assets/images/pkn/Pancasila.png",
-          name: localization!.pancasila,
-          value: localization.pancasila,
-          level: "Level 2"),
+          level: "Level 1"),
 
-      // 3.1
+      // 1.8
       GameItem(
           image: "assets/images/pkn/Pancasila.png",
           name: localization!.pancasila,
           value: localization.pancasila,
-          level: "Level 3"),
-      // 3.2
-      GameItem(
-          image: "assets/images/pkn/Pancasila.png",
-          name: localization!.pancasila,
-          value: localization.pancasila,
-          level: "Level 3"),
-      // 3.3
-      GameItem(
-          image: "assets/images/pkn/Pancasila.png",
-          name: localization!.pancasila,
-          value: localization.pancasila,
-          level: "Level 3"),
-      // 3.4
-      GameItem(
-          image: "assets/images/pkn/Pancasila.png",
-          name: localization!.pancasila,
-          value: localization.pancasila,
-          level: "Level 3"),
-      // 3.5
-      GameItem(
-          image: "assets/images/pkn/Pancasila.png",
-          name: localization!.pancasila,
-          value: localization.pancasila,
-          level: "Level 3"),
-      // 3.6
-      GameItem(
-          image: "assets/images/pkn/Pancasila.png",
-          name: localization!.pancasila,
-          value: localization.pancasila,
-          level: "Level 3"),
+          level: "Level 1"),
 
-      // 4.1
+      // 1.9
       GameItem(
           image: "assets/images/pkn/Pancasila.png",
           name: localization!.pancasila,
           value: localization.pancasila,
-          level: "Level 4"),
-      // 4.2
-      GameItem(
-          image: "assets/images/pkn/Pancasila.png",
-          name: localization!.pancasila,
-          value: localization.pancasila,
-          level: "Level 4"),
-      //4.3
-      GameItem(
-          image: "assets/images/pkn/Pancasila.png",
-          name: localization!.pancasila,
-          value: localization.pancasila,
-          level: "Level 4"),
-      // 4.4
-      GameItem(
-          image: "assets/images/pkn/Pancasila.png",
-          name: localization!.pancasila,
-          value: localization.pancasila,
-          level: "Level 4"),
-      // 4.5
-      GameItem(
-          image: "assets/images/pkn/Pancasila.png",
-          name: localization!.pancasila,
-          value: localization.pancasila,
-          level: "Level 4"),
-      // 4.6
-      GameItem(
-          image: "assets/images/pkn/Pancasila.png",
-          name: localization!.pancasila,
-          value: localization.pancasila,
-          level: "Level 4"),
+          level: "Level 1"),
 
-      // 5.1
+      // 1.10
       GameItem(
           image: "assets/images/pkn/Pancasila.png",
           name: localization!.pancasila,
           value: localization.pancasila,
-          level: "Level 5"),
-      // 5.2
-      GameItem(
-          image: "assets/images/pkn/Pancasila.png",
-          name: localization!.pancasila,
-          value: localization.pancasila,
-          level: "Level 5"),
-      // 5.3
-      GameItem(
-          image: "assets/images/pkn/Pancasila.png",
-          name: localization!.pancasila,
-          value: localization.pancasila,
-          level: "Level 5"),
-      // 5.4
-      GameItem(
-          image: "assets/images/pkn/Pancasila.png",
-          name: localization!.pancasila,
-          value: localization.pancasila,
-          level: "Level 5"),
-      // 5.5
-      GameItem(
-          image: "assets/images/pkn/Pancasila.png",
-          name: localization!.pancasila,
-          value: localization.pancasila,
-          level: "Level 5"),
-      // 5.6
-      GameItem(
-          image: "assets/images/pkn/Pancasila.png",
-          name: localization!.pancasila,
-          value: localization.pancasila,
-          level: "Level 5"),
+          level: "Level 1"),
     ];
     print(utilities.getGameLevel());
     choice_A = List<GameItem>.from(choice_All.where((element) =>

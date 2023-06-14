@@ -6,17 +6,7 @@ class Utilities {
 
   int getGameLevel() {
     temp = GetStorage().read('selectedLevel');
-    if (temp.contains('1')) {
-      selectedGameLevel = 1;
-    } else if (temp.contains('2')) {
-      selectedGameLevel = 2;
-    } else if (temp.contains('3')) {
-      selectedGameLevel = 3;
-    } else if (temp.contains('4')) {
-      selectedGameLevel = 4;
-    } else {
-      selectedGameLevel = 5;
-    }
+    selectedGameLevel = temp.contains('1') ? 1 : 1;
 
     return selectedGameLevel;
   }
@@ -24,13 +14,7 @@ class Utilities {
   void nextGameLevel() {
     temp = GetStorage().read('selectedLevel');
     if (temp.contains('1')) {
-      GetStorage().write('selectedLevel', "Level 2");
-    } else if (temp.contains('2')) {
-      GetStorage().write('selectedLevel', "Level 3");
-    } else if (temp.contains('3')) {
-      GetStorage().write('selectedLevel', "Level 4");
-    } else {
-      GetStorage().write('selectedLevel', "Level 5");
+      GetStorage().write('selectedLevel', "Level 1");
     }
   }
 }

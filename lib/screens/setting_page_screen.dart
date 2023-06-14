@@ -38,42 +38,29 @@ class _SettingPageScreenState extends State<SettingPageScreen> {
   Widget build(BuildContext context) {
     List<String> gameLevels = [
       AppLocalizations.of(context)!.level1,
-      AppLocalizations.of(context)!.level2,
-      AppLocalizations.of(context)!.level3,
-      AppLocalizations.of(context)!.level4,
-      AppLocalizations.of(context)!.level5,
+      // AppLocalizations.of(context)!.level2,
+      // AppLocalizations.of(context)!.level3,
+      // AppLocalizations.of(context)!.level4,
+      // AppLocalizations.of(context)!.level5,
     ];
 
     List<String> themeColors = [
-      AppLocalizations.of(context)!.pink,
-      AppLocalizations.of(context)!.purple,
-      AppLocalizations.of(context)!.orange
+      AppLocalizations.of(context)!.pink
+      // AppLocalizations.of(context)!.purple,
+      // AppLocalizations.of(context)!.orange
     ];
 
     String tempLanguage = box.read('selectedLanguage');
     String tempLevel = box.read('selectedLevel');
     int selectedThemeCode = box.read('selectedThemeCode');
 
-    selectedLanguage = tempLanguage == "አማርኛ"
-        ? AppLocalizations.of(context)!.amharic
-        : tempLanguage == "English"
-            ? AppLocalizations.of(context)!.english
-            : AppLocalizations.of(context)!.arabic;
-    selectedLevel = tempLevel.contains('1') == true
-        ? AppLocalizations.of(context)!.level1
-        : tempLevel.contains('2') == true
-            ? AppLocalizations.of(context)!.level2
-            : tempLevel.contains('3') == true
-                ? AppLocalizations.of(context)!.level3
-                : tempLevel.contains('4') == true
-                    ? AppLocalizations.of(context)!.level4
-                    : AppLocalizations.of(context)!.level5;
+    selectedLanguage = AppLocalizations.of(context)!.english;
 
-    selectedThemeColor = selectedThemeCode == 0
-        ? AppLocalizations.of(context)!.pink
-        : selectedThemeCode == 1
-            ? AppLocalizations.of(context)!.purple
-            : AppLocalizations.of(context)!.orange;
+    selectedLevel = tempLevel.contains('1')
+        ? AppLocalizations.of(context)!.level1
+        : AppLocalizations.of(context)!.level1;
+
+    selectedThemeColor = AppLocalizations.of(context)!.pink;
 
     return Scaffold(
       appBar: AppBar(
@@ -115,23 +102,8 @@ class _SettingPageScreenState extends State<SettingPageScreen> {
 
                         selectedLanguage = box.read('selectedLanguage');
 
-                        if (selectedLanguage == 'አማርኛ') {
-                          provider.setLocale(const Locale('am'));
-                          box.write('selectedLocale', 'am');
-                        } else {
-                          if (selectedLanguage == 'العربية') {
-                            provider.setLocale(const Locale('ar'));
-                            box.write('selectedLocale', 'ar');
-                          } else {
-                            if (selectedLanguage == 'Indonesian') {
-                              provider.setLocale(const Locale('id'));
-                              box.write('selectedLocale', 'id');
-                            } else {
-                              provider.setLocale(const Locale('en'));
-                              box.write('selectedLocale', 'en');
-                            }
-                          }
-                        }
+                        provider.setLocale(const Locale('en'));
+                        box.write('selectedLocale', 'en');
                         selectedLevel = box.read('selectedLevel');
                         selectedThemeColor = box.read('selectedThemeColor');
                       });
@@ -163,10 +135,10 @@ class _SettingPageScreenState extends State<SettingPageScreen> {
                     icon: const Icon(Icons.arrow_upward),
                     iconSize: 24,
                     elevation: 16,
-                    style: const TextStyle(color: Colors.deepPurple),
+                    style: const TextStyle(color: Colors.pink),
                     underline: Container(
                       height: 2,
-                      color: Colors.deepPurpleAccent,
+                      color: Colors.pinkAccent,
                     ),
                     onChanged: (String? newValue) {
                       setState(() {
@@ -201,10 +173,10 @@ class _SettingPageScreenState extends State<SettingPageScreen> {
                     icon: const Icon(Icons.color_lens),
                     iconSize: 24,
                     elevation: 6,
-                    style: const TextStyle(color: Colors.deepPurple),
+                    style: const TextStyle(color: Colors.pinkAccent),
                     underline: Container(
                       height: 2,
-                      color: Colors.deepPurpleAccent,
+                      color: Colors.pinkAccent,
                     ),
                     onChanged: (String? newValue) {
                       setState(() {
