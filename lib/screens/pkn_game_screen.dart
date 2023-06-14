@@ -249,7 +249,7 @@ class _PknGameScreenState extends State<PknGameScreen> {
                         height: 100,
                       ),
                       Text(
-                        "$score/60",
+                        "$score/100",
                         style: const TextStyle(fontSize: 50),
                       ),
                       Text(
