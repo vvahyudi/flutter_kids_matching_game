@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_kids_matching_game/provider/settings_provider.dart';
-import 'package:flutter_kids_matching_game/screens/animal_game_screen.dart';
-import 'package:flutter_kids_matching_game/screens/color_game_screen.dart';
-import 'package:flutter_kids_matching_game/screens/fruit_game_screen.dart';
+// import 'package:flutter_kids_matching_game/screens/animal_game_screen.dart';
+// import 'package:flutter_kids_matching_game/screens/color_game_screen.dart';
+// import 'package:flutter_kids_matching_game/screens/fruit_game_screen.dart';
 import 'package:flutter_kids_matching_game/screens/game-list_screen.dart';
 import 'package:flutter_kids_matching_game/screens/pkn_game_screen.dart';
 import 'package:flutter_kids_matching_game/screens/setting_page_screen.dart';
@@ -50,11 +50,11 @@ class _MyAppState extends State<MyApp> {
               colorScheme: ColorScheme(
                   primary: provider.themeColor as Color,
                   onError: Colors.red,
-                  onBackground: Color.fromARGB(255, 229, 172, 172),
+                  onBackground: const Color.fromARGB(255, 229, 172, 172),
                   onSecondary: const Color.fromARGB(255, 229, 172, 172),
                   error: Colors.red,
-                  background: Color.fromARGB(255, 229, 172, 172),
-                  onPrimary: Color.fromARGB(255, 229, 172, 172),
+                  background: const Color.fromARGB(255, 229, 172, 172),
+                  onPrimary: const Color.fromARGB(255, 229, 172, 172),
                   brightness: Brightness.light,
                   onSurface: Colors.black,
                   surface: Colors.grey,

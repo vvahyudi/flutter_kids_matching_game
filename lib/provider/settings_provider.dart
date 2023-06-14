@@ -5,14 +5,11 @@ import 'package:get_storage/get_storage.dart';
 class SettingsProvider extends ChangeNotifier {
   String selectedLocale = GetStorage().read('selectedLocale');
   late Locale? _locale =
-      selectedLocale != Null ? Locale(selectedLocale) : Locale('en');
+      selectedLocale != null ? Locale(selectedLocale!) : Locale('en');
 
   int colorCode = GetStorage().read('selectedThemeCode');
-  late Color _themColor = colorCode == 0
-      ? Colors.pinkAccent
-      : colorCode == 1
-          ? Colors.purpleAccent
-          : Colors.orangeAccent;
+  late Color _themeColor =
+      colorCode == 0 ? Colors.pinkAccent : Colors.pinkAccent;
 
   // then we will define getter and setter for the (selected)language
   Locale? get local {
@@ -36,16 +33,12 @@ class SettingsProvider extends ChangeNotifier {
 
   // setter and getter for theme color
   Color? get themeColor {
-    return _themColor;
+    return _themeColor;
   }
 
   void setTheme(int colorCode) {
     if (colorCode == 0) {
-      _themColor = Colors.pinkAccent;
-    } else if (colorCode == 1) {
-      _themColor = Colors.purpleAccent;
-    } else {
-      _themColor = Colors.orangeAccent;
+      _themeColor = Colors.pinkAccent;
     }
     notifyListeners();
   }

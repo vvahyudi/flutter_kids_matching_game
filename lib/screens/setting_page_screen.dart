@@ -50,9 +50,9 @@ class _SettingPageScreenState extends State<SettingPageScreen> {
       // AppLocalizations.of(context)!.orange
     ];
 
-    String tempLanguage = box.read('selectedLanguage');
+    // String tempLanguage = box.read('selectedLanguage');
     String tempLevel = box.read('selectedLevel');
-    int selectedThemeCode = box.read('selectedThemeCode');
+    // int selectedThemeCode = box.read('selectedThemeCode');
 
     selectedLanguage = AppLocalizations.of(context)!.english;
 

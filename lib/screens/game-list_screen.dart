@@ -14,7 +14,7 @@ class _GameListScreenState extends State<GameListScreen> {
     return Scaffold(
       appBar: AppBar(
           title: const Text(
-            "Master Games",
+            "SaSix",
             style: TextStyle(fontSize: 40),
           ),
           centerTitle: true,
