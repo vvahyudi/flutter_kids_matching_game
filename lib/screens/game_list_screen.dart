@@ -91,10 +91,6 @@ class _GameListScreenState extends State<GameListScreen> {
               },
               child: Text(
                 AppLocalizations.of(context)!.pilihanGanda,
-                style: const TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.w600,
-                    fontStyle: FontStyle.normal),
               ),
             ),
             const SizedBox(
@@ -106,7 +102,6 @@ class _GameListScreenState extends State<GameListScreen> {
               },
               child: Text(
                 AppLocalizations.of(context)!.pknGame,
-                style: const TextStyle(fontSize: 20),
               ),
             ),
           ],

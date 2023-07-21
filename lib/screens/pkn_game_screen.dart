@@ -2,7 +2,7 @@ import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:sasix/utilities/utilities.dart';
 import 'package:provider/provider.dart';
-import '../models/gameItems.dart';
+import '../models/game_items.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../provider/settings_provider.dart';
@@ -22,9 +22,9 @@ class _PknGameScreenState extends State<PknGameScreen> {
   late bool gameOver;
   late Utilities utilities = Utilities();
 
-  late List<GameItem> choice_All;
-  late List<GameItem> choice_A;
-  late List<GameItem> choice_B;
+  late List<GameItem> choiceAll;
+  late List<GameItem> choiceA;
+  late List<GameItem> choiceB;
 
   @override
   void initState() {
@@ -42,7 +42,7 @@ class _PknGameScreenState extends State<PknGameScreen> {
     score = 0;
     gameOver = false;
 
-    choice_All = [
+    choiceAll = [
       //1.1
       GameItem(
           image: "assets/images/pkn/Pancasila.png",
@@ -108,12 +108,12 @@ class _PknGameScreenState extends State<PknGameScreen> {
       //     value: localization.pancasila,
       //     level: "Level 1"),
     ];
-    choice_A = List<GameItem>.from(choice_All.where((element) =>
+    choiceA = List<GameItem>.from(choiceAll.where((element) =>
         element.level.contains(utilities.getGameLevel().toString())));
-    choice_B = List<GameItem>.from(choice_All.where((element) =>
+    choiceB = List<GameItem>.from(choiceAll.where((element) =>
         element.level.contains(utilities.getGameLevel().toString())));
-    choice_A.shuffle();
-    choice_B.shuffle();
+    choiceA.shuffle();
+    choiceB.shuffle();
   }
 
   final _audioController = AudioPlayer();
@@ -122,7 +122,7 @@ class _PknGameScreenState extends State<PknGameScreen> {
   Widget build(BuildContext context) {
     final provider = Provider.of<SettingsProvider>(context);
 
-    if (choice_A.isEmpty) {
+    if (choiceA.isEmpty) {
       gameOver = true;
     }
     return Scaffold(
@@ -150,7 +150,7 @@ class _PknGameScreenState extends State<PknGameScreen> {
                   Row(
                     children: <Widget>[
                       Column(
-                        children: choice_A.map((choice) {
+                        children: choiceA.map((choice) {
                           return Container(
                             margin: const EdgeInsets.all(8),
                             child: Draggable<GameItem>(
@@ -195,7 +195,7 @@ class _PknGameScreenState extends State<PknGameScreen> {
                       ),
                       const Spacer(),
                       Column(
-                        children: choice_B.map((choice) {
+                        children: choiceB.map((choice) {
                           return DragTarget<GameItem>(
                               onAccept: (receivedItem) async {
                             if (receivedItem.value == choice.value) {
@@ -204,8 +204,8 @@ class _PknGameScreenState extends State<PknGameScreen> {
 
                               // if (!mounted) return;
                               setState(() {
-                                choice_A.remove(receivedItem);
-                                choice_B.remove(choice);
+                                choiceA.remove(receivedItem);
+                                choiceB.remove(choice);
                                 score += 10;
                                 choice.accepting = false;
                               });

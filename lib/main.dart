@@ -3,7 +3,7 @@ import 'package:sasix/provider/settings_provider.dart';
 // import 'package:flutter_kids_matching_game/screens/animal_game_screen.dart';
 // import 'package:flutter_kids_matching_game/screens/color_game_screen.dart';
 // import 'package:flutter_kids_matching_game/screens/fruit_game_screen.dart';
-import 'package:sasix/screens/game-list_screen.dart';
+import 'package:sasix/screens/game_list_screen.dart';
 import 'package:sasix/screens/pilihan_ganda_screen.dart';
 import 'package:sasix/screens/pkn_game_screen.dart';
 import 'package:sasix/screens/setting_page_screen.dart';
@@ -69,7 +69,9 @@ class _MyAppState extends State<MyApp> {
                   shape: BeveledRectangleBorder(
                       borderRadius: BorderRadius.circular(10)),
                   textStyle: const TextStyle(
-                      fontSize: 40, fontStyle: FontStyle.italic),
+                      fontSize: 30,
+                      fontStyle: FontStyle.normal,
+                      fontWeight: FontWeight.w600),
                 ),
               ),
               buttonTheme: const ButtonThemeData()),
