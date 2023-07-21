@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_kids_matching_game/provider/settings_provider.dart';
+import 'package:sasix/provider/settings_provider.dart';
 // import 'package:flutter_kids_matching_game/screens/animal_game_screen.dart';
 // import 'package:flutter_kids_matching_game/screens/color_game_screen.dart';
 // import 'package:flutter_kids_matching_game/screens/fruit_game_screen.dart';
-import 'package:flutter_kids_matching_game/screens/game-list_screen.dart';
-import 'package:flutter_kids_matching_game/screens/pkn_game_screen.dart';
-import 'package:flutter_kids_matching_game/screens/setting_page_screen.dart';
+import 'package:sasix/screens/game-list_screen.dart';
+import 'package:sasix/screens/pilihan_ganda_screen.dart';
+import 'package:sasix/screens/pkn_game_screen.dart';
+import 'package:sasix/screens/setting_page_screen.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:provider/provider.dart';
@@ -15,10 +16,12 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 void main() async {
   await GetStorage.init();
   WidgetsFlutterBinding.ensureInitialized();
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatefulWidget {
+  const MyApp({super.key});
+
   @override
   State<MyApp> createState() => _MyAppState();
 }
@@ -45,19 +48,20 @@ class _MyAppState extends State<MyApp> {
         final provider = Provider.of<SettingsProvider>(context);
 
         return MaterialApp(
+          title: 'SaSix',
           theme: ThemeData(
-              fontFamily: 'Sunnyspells',
+              fontFamily: 'JosefinSans',
               colorScheme: ColorScheme(
                   primary: provider.themeColor as Color,
                   onError: Colors.red,
-                  onBackground: const Color.fromARGB(255, 229, 172, 172),
-                  onSecondary: const Color.fromARGB(255, 229, 172, 172),
+                  onBackground: const Color.fromARGB(255, 237, 37, 37),
+                  onSecondary: Colors.white,
                   error: Colors.red,
                   background: const Color.fromARGB(255, 229, 172, 172),
-                  onPrimary: const Color.fromARGB(255, 229, 172, 172),
+                  onPrimary: Colors.white,
                   brightness: Brightness.light,
                   onSurface: Colors.black,
-                  surface: Colors.grey,
+                  surface: const Color.fromARGB(255, 237, 37, 37),
                   secondary: provider.themeColor as Color),
               elevatedButtonTheme: ElevatedButtonThemeData(
                 style: ElevatedButton.styleFrom(
@@ -74,8 +78,8 @@ class _MyAppState extends State<MyApp> {
             '/': (context) => const GameListScreen(),
             // '/colorGame': (context) => const ColorGameScreen(),
             // '/animalGame': (context) => const AnimalGameScreen(),
-            // '/fruitGame': (context) => const FruitGameScreen(),
             '/pknGame': (context) => const PknGameScreen(),
+            '/pilihanGanda': (context) => const PilihanGandaScreen(),
             '/setting': (context) => const SettingPageScreen(),
           },
           supportedLocales: L10n.all,

@@ -1,7 +1,6 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_kids_matching_game/utilities/utilities.dart';
-import 'package:get_storage/get_storage.dart';
+import 'package:sasix/utilities/utilities.dart';
 import 'package:provider/provider.dart';
 import '../models/gameItems.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -47,69 +46,68 @@ class _PknGameScreenState extends State<PknGameScreen> {
       //1.1
       GameItem(
           image: "assets/images/pkn/Pancasila.png",
-          name: localization!.pancasila,
+          name: localization.pancasila,
           value: localization.pancasila,
           level: "Level 1"),
       //1.2
       GameItem(
-          image: "assets/images/pkn/Pancasila.png",
-          name: localization!.pancasila,
-          value: localization.pancasila,
+          image: "assets/images/pkn/SumpahPemuda.png",
+          name: localization.sumpahPemuda,
+          value: localization.sumpahPemuda,
           level: "Level 1"),
       //1.3
       GameItem(
           image: "assets/images/pkn/Pancasila.png",
-          name: localization!.pancasila,
+          name: localization.pancasila,
           value: localization.pancasila,
           level: "Level 1"),
-      //1.4
-      GameItem(
-          image: "assets/images/pkn/Pancasila.png",
-          name: localization!.pancasila,
-          value: localization.pancasila,
-          level: "Level 1"),
-      //1.5
-      GameItem(
-          image: "assets/images/pkn/Pancasila.png",
-          name: localization!.pancasila,
-          value: localization.pancasila,
-          level: "Level 1"),
-      // 1.6
-      GameItem(
-          image: "assets/images/pkn/Pancasila.png",
-          name: localization!.pancasila,
-          value: localization.pancasila,
-          level: "Level 1"),
+      // //1.4
+      // GameItem(
+      //     image: "assets/images/pkn/Pancasila.png",
+      //     name: localization!.pancasila,
+      //     value: localization.pancasila,
+      //     level: "Level 1"),
+      // //1.5
+      // GameItem(
+      //     image: "assets/images/pkn/Pancasila.png",
+      //     name: localization!.pancasila,
+      //     value: localization.pancasila,
+      //     level: "Level 1"),
+      // // 1.6
+      // GameItem(
+      //     image: "assets/images/pkn/Pancasila.png",
+      //     name: localization!.pancasila,
+      //     value: localization.pancasila,
+      //     level: "Level 1"),
 
-      // 1.7
-      GameItem(
-          image: "assets/images/pkn/Pancasila.png",
-          name: localization!.pancasila,
-          value: localization.pancasila,
-          level: "Level 1"),
+      // // 1.7
+      // GameItem(
+      //     image: "assets/images/pkn/Pancasila.png",
+      //     name: localization!.pancasila,
+      //     value: localization.pancasila,
+      //     level: "Level 1"),
 
-      // 1.8
-      GameItem(
-          image: "assets/images/pkn/Pancasila.png",
-          name: localization!.pancasila,
-          value: localization.pancasila,
-          level: "Level 1"),
+      // // 1.8
+      // GameItem(
+      //     image: "assets/images/pkn/Pancasila.png",
+      //     name: localization!.pancasila,
+      //     value: localization.pancasila,
+      //     level: "Level 1"),
 
-      // 1.9
-      GameItem(
-          image: "assets/images/pkn/Pancasila.png",
-          name: localization!.pancasila,
-          value: localization.pancasila,
-          level: "Level 1"),
+      // // 1.9
+      // GameItem(
+      //     image: "assets/images/pkn/Pancasila.png",
+      //     name: localization!.pancasila,
+      //     value: localization.pancasila,
+      //     level: "Level 1"),
 
-      // 1.10
-      GameItem(
-          image: "assets/images/pkn/Pancasila.png",
-          name: localization!.pancasila,
-          value: localization.pancasila,
-          level: "Level 1"),
+      // // 1.10
+      // GameItem(
+      //     image: "assets/images/pkn/Pancasila.png",
+      //     name: localization!.pancasila,
+      //     value: localization.pancasila,
+      //     level: "Level 1"),
     ];
-    print(utilities.getGameLevel());
     choice_A = List<GameItem>.from(choice_All.where((element) =>
         element.level.contains(utilities.getGameLevel().toString())));
     choice_B = List<GameItem>.from(choice_All.where((element) =>
@@ -161,8 +159,8 @@ class _PknGameScreenState extends State<PknGameScreen> {
                                 choice.name,
                                 style: const TextStyle(
                                   color: Colors.black,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 40,
+                                  fontWeight: FontWeight.normal,
+                                  fontSize: 18,
                                 ),
                               ),
                               childWhenDragging: Container(
@@ -173,8 +171,8 @@ class _PknGameScreenState extends State<PknGameScreen> {
                                   choice.name,
                                   style: const TextStyle(
                                     color: Colors.black,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 40,
+                                    fontWeight: FontWeight.normal,
+                                    fontSize: 20,
                                   ),
                                 ),
                               ),
@@ -186,8 +184,8 @@ class _PknGameScreenState extends State<PknGameScreen> {
                                   choice.name,
                                   style: const TextStyle(
                                     color: Colors.black,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 25,
+                                    fontWeight: FontWeight.normal,
+                                    fontSize: 18,
                                   ),
                                 ),
                               ),

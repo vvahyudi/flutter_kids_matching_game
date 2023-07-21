@@ -1,15 +1,16 @@
+// ignore_for_file: unnecessary_null_comparison
+
 import 'package:flutter/material.dart';
-import 'package:flutter_kids_matching_game/l10n/l10n.dart';
+import 'package:sasix/l10n/l10n.dart';
 import 'package:get_storage/get_storage.dart';
 
 class SettingsProvider extends ChangeNotifier {
   String selectedLocale = GetStorage().read('selectedLocale');
   late Locale? _locale =
-      selectedLocale != null ? Locale(selectedLocale!) : Locale('en');
+      selectedLocale != null ? Locale(selectedLocale) : const Locale('en');
 
   int colorCode = GetStorage().read('selectedThemeCode');
-  late Color _themeColor =
-      colorCode == 0 ? Colors.pinkAccent : Colors.pinkAccent;
+  late Color _themeColor = colorCode == 0 ? Colors.redAccent : Colors.redAccent;
 
   // then we will define getter and setter for the (selected)language
   Locale? get local {
@@ -38,7 +39,7 @@ class SettingsProvider extends ChangeNotifier {
 
   void setTheme(int colorCode) {
     if (colorCode == 0) {
-      _themeColor = Colors.pinkAccent;
+      _themeColor = Colors.redAccent;
     }
     notifyListeners();
   }

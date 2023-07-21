@@ -1,4 +1,4 @@
-package com.example.flutter_kids_matching_game
+package com.example.sasix
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -1,83 +1,78 @@
 {
-"language": "Language",
-"@language":{
-"description": "Current Language"},
-"gameOver":"Game Over!",
-"@gameOver":{
-                        "description": "game status"
-                        },
-
-"tryAgain": "Try Again",
-"@tryAgain":{
-                          "description": "play again"
-                          },
-"nextGame": "Next Game ⋙",
-"@nextGame":{
-                          "description": "Play Next Level"
-                          },
-"colorGame":"Color Game",
-"@colorGame":{
-              "description": "color game"
-                          },
-"animalGame":"Animal Game",
-"@animalGame":{
-              "description": "animal game"
-                          },
-"fruitGame":"Fruit Game",
-"@fruitGame":{
-              "description": "fruit game"
-              },
-"pknGame":"Game Menjodohkan",
-"@pknGame":{
-              "description": "Game Menjodohkan"
-              },
-              
- "lessonLanguage":"Lesson Language",
-    "@lessonLanguage":{
-     "description": "lesson language"
-     },
-       "english":"English",
-                   "@english":{
-                    "description": "english"
-                    },
-
- "gameLevel":"Game Level",
-     "@gameLevel":{
-      "description": "game level"
-      },
-
-
-      "themeColor":"Theme Color",
-           "@themeColor":{
-            "description": "theme color"
-            },
-   "score":"Score",
-
-     "@score":{
-       "description": "game score"
-               },
-   "setting":"Settings",
-   "@setting":{
-          "description": "game setting"
-                  },
-   "level1":"Level 1",
-   "@level1":{
-          "description": "game level 1"
-                  },
-   "pink":"Pink",
-   "@pink":{
-          "description": "theme color pink"
-                  },
-
-"pancasila": "Manakah yang merupakan Lambang Pancasila?",
-    "@pancasila":{
-                    "description": "pancasila"
-                                            }
-
-
-
-
-
-
-
+	"language": "Language",
+	"@language": {
+		"description": "Current Language"
+	},
+	"gameOver": "Game Over!",
+	"@gameOver": {
+		"description": "game status"
+	},
+	"tryAgain": "Try Again",
+	"@tryAgain": {
+		"description": "play again"
+	},
+	"nextGame": "Next Game ⋙",
+	"@nextGame": {
+		"description": "Play Next Level"
+	},
+	"colorGame": "Color Game",
+	"@colorGame": {
+		"description": "color game"
+	},
+	"animalGame": "Animal Game",
+	"@animalGame": {
+		"description": "animal game"
+	},
+	"fruitGame": "Fruit Game",
+	"@fruitGame": {
+		"description": "fruit game"
+	},
+	"pknGame": "Game Menjodohkan",
+	"@pknGame": {
+		"description": "Game Menjodohkan"
+	},
+	"pilihanGanda": "Pilihan Ganda",
+	"@pilihanGanda": {
+		"description": "Pilihan Ganda"
+	},
+	"lessonLanguage": "Lesson Language",
+	"@lessonLanguage": {
+		"description": "lesson language"
+	},
+	"english": "English",
+	"@english": {
+		"description": "english"
+	},
+	"gameLevel": "Game Level",
+	"@gameLevel": {
+		"description": "game level"
+	},
+	"themeColor": "Theme Color",
+	"@themeColor": {
+		"description": "theme color"
+	},
+	"score": "Score",
+	"@score": {
+		"description": "game score"
+	},
+	"setting": "Settings",
+	"@setting": {
+		"description": "game setting"
+	},
+	"level1": "Level 1",
+	"@level1": {
+		"description": "game level 1"
+	},
+	"pink": "Pink",
+	"@pink": {
+		"description": "theme color pink"
+	},
+	"pancasila": "Manakah yang merupakan Lambang Pancasila?",
+	"@pancasila": {
+		"description": "pancasila"
+	},
+	"sumpahPemuda": "Kapankah hari lahir sumpah pemuda?",
+	"@sumpahPemuda": {
+		"description": "sumpah pemuda"
+	}
 }

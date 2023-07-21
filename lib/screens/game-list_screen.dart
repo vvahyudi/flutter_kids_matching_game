@@ -22,7 +22,7 @@ class _GameListScreenState extends State<GameListScreen> {
             IconButton(
               icon: const Icon(
                 Icons.settings,
-                size: 50,
+                size: 20,
               ),
               onPressed: () {
                 Navigator.pushNamed(context, '/setting');
@@ -85,20 +85,28 @@ class _GameListScreenState extends State<GameListScreen> {
             // const SizedBox(
             //   height: 20,
             // ),
-            // ElevatedButton(
-            //   onPressed: () {
-            //     Navigator.pushNamed(context, '/fruitGame');
-            //   },
-            //   child: Text(
-            //     AppLocalizations.of(context)!.fruitGame,
-            //   ),
-            // ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/pilihanGanda');
+              },
+              child: Text(
+                AppLocalizations.of(context)!.pilihanGanda,
+                style: const TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w600,
+                    fontStyle: FontStyle.normal),
+              ),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
             ElevatedButton(
               onPressed: () {
                 Navigator.pushNamed(context, '/pknGame');
               },
               child: Text(
                 AppLocalizations.of(context)!.pknGame,
+                style: const TextStyle(fontSize: 20),
               ),
             ),
           ],

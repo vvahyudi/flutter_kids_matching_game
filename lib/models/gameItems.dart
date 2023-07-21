@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+// ignore_for_file: unused_local_variable
 
 class GameItem {
   String image;
@@ -17,8 +16,8 @@ class GameItem {
 }
 
 void getList() {
-  List<GameItem> choice_A;
-  List<GameItem> choice_B;
+  List<GameItem> choiceA;
+  List<GameItem> choiceB;
   // choice_A = [
   //   GameItem(image: "assets/images/animals/Doe.png", name: "Doe", value: "doe"),
   //   GameItem(

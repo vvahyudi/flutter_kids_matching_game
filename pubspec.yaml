@@ -1,5 +1,5 @@
-name: flutter_kids_matching_game
-description: A new Flutter project.
+name: sasix
+description: Game untuk Kelas 3 SD.
 
 publish_to: "none" # Remove this line if you wish to publish to pub.dev
 
@@ -35,15 +35,12 @@ flutter:
   assets:
     - assets/sounds/
     - assets/images/
-    - assets/images/colors/
-    - assets/images/animals/
-    - assets/images/fruits/
     - assets/images/pkn/
 
   fonts:
-    - family: PrincessSofia
+    - family: JosefinSans
       fonts:
-        - asset: assets/fonts/PrincessSofia-Regular.ttf
+        - asset: assets/fonts/JosefinSansVariableFont.ttf
     #       - asset: fonts/Schyler-Italic.ttf
     #         style: italic
     - family: Sunnyspells
